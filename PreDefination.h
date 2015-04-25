@@ -9,6 +9,6 @@
 #ifndef Pan___PreDefination_h
 #define Pan___PreDefination_h
 
-#define HOSTNAME @"192.168.1.106:8888/mental"
+#define HOSTNAME @"192.168.1.108:8888/mental"
 
 #endif
