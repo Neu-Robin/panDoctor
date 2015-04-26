@@ -6,10 +6,10 @@
 //  Copyright (c) 2015 Neil. All rights reserved.
 //
 
-//This is the latest version
+//adsfasfadf
 #ifndef Pan___PreDefination_h
 #define Pan___PreDefination_h
 
 #define HOSTNAME @"192.168.1.108:8888/mental"
-
+#define test 123
 #endif
