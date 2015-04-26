@@ -43,16 +43,16 @@
 #define KDeviceHeight [[UIScreen mainScreen]bounds].size.height
 @interface DoctorItemViewCell ()
 @property (strong, nonatomic) UILabel *specialLabel;
-@property (strong, nonatomic) UILabel *priceLabel;
+//@property (strong, nonatomic) UILabel *priceLabel;
 @property (strong, nonatomic) UILabel *locationLabel;
-@property (strong, nonatomic) UILabel *conTimesLabel;
+//@property (strong, nonatomic) UILabel *conTimesLabel;
 @property (strong, nonatomic) UILabel *rankLabel;
-@property (strong, nonatomic) UILabel *GPSLabel;
+//@property (strong, nonatomic) UILabel *GPSLabel;
 @end
 @implementation DoctorItemViewCell
 @synthesize doctor;
 @synthesize imageView;
-@synthesize starRate;
+//@synthesize starRate;
 //cell的初始化函数
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -99,41 +99,40 @@
         self.secRankLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.rankLabel.frame), CGRectGetMinY(self.rankLabel.frame), ksecRankWidth*KDeviceWidth, kRankLabelHeight*KDeviceHeight)];
         self.secRankLabel.textColor = [UIColor colorWithRed:3/255.0 green:133/255.0 blue:125/255.0 alpha:1.0];
         
-        self.conTimesLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.secRankLabel.frame), CGRectGetMinY(self.rankLabel.frame), kConTimes*KDeviceWidth, kRankLabelHeight*KDeviceHeight)];
-        self.conTimesLabel.textColor = [UIColor grayColor];
-        self.conTimesLabel.text = @"已咨询:";
+//        self.conTimesLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.secRankLabel.frame), CGRectGetMinY(self.rankLabel.frame), kConTimes*KDeviceWidth, kRankLabelHeight*KDeviceHeight)];
+//        self.conTimesLabel.textColor = [UIColor grayColor];
+//        self.conTimesLabel.text = @"已咨询:";
+//        
+//        self.secConTimesLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.conTimesLabel.frame), CGRectGetMinY(self.conTimesLabel.frame),kSecContimesWidth*KDeviceWidth, kRankLabelHeight*KDeviceHeight)];
+//        self.secConTimesLabel.textAlignment = NSTextAlignmentLeft;
+//        self.secConTimesLabel.textColor = [UIColor colorWithRed:3/255.0 green:133/255.0 blue:125/255.0 alpha:1.0];
+
+//        self.priceLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMinX(self.rankLabel.frame), CGRectGetMaxY(self.rankLabel.frame), kRankLabelWidth*KDeviceWidth, kRankLabelHeight*KDeviceHeight)];
+//        self.priceLabel.textColor = [UIColor grayColor];
+//        self.priceLabel.text = @"资费:";
+//        
+//        self.secPriceLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.priceLabel.frame), CGRectGetMinY(self.priceLabel.frame), kSecPriceWidth*KDeviceWidth, kRankLabelHeight*KDeviceHeight)];
+//        self.secPriceLabel.textColor = [UIColor colorWithRed:3/255.0 green:133/255.0 blue:125/255.0 alpha:1.0];
         
-        self.secConTimesLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.conTimesLabel.frame), CGRectGetMinY(self.conTimesLabel.frame),kSecContimesWidth*KDeviceWidth, kRankLabelHeight*KDeviceHeight)];
-        self.secConTimesLabel.textAlignment = NSTextAlignmentLeft;
-        self.secConTimesLabel.textColor = [UIColor colorWithRed:3/255.0 green:133/255.0 blue:125/255.0 alpha:1.0];
+//        self.GPSLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMinX(self.conTimesLabel.frame), CGRectGetMinY(self.priceLabel.frame), kRankLabelWidth*KDeviceWidth, kRankLabelHeight*KDeviceHeight)];
+//        self.GPSLabel.textColor = [UIColor grayColor];
+//        self.GPSLabel.text = @"距离:";
+//        
+//        self.secGPSLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.GPSLabel.frame), CGRectGetMinY(self.priceLabel.frame), 3*kRankLabelWidth*KDeviceWidth, kRankLabelHeight*KDeviceHeight)];
+//        self.secGPSLabel.textColor = [UIColor colorWithRed:3/255.0 green:133/255.0 blue:125/255.0 alpha:1.0];
+//        self.secGPSLabel.textAlignment = NSTextAlignmentLeft;
         
-        self.priceLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMinX(self.rankLabel.frame), CGRectGetMaxY(self.rankLabel.frame), kRankLabelWidth*KDeviceWidth, kRankLabelHeight*KDeviceHeight)];
-        self.priceLabel.textColor = [UIColor grayColor];
-        self.priceLabel.text = @"资费:";
-        
-        self.secPriceLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.priceLabel.frame), CGRectGetMinY(self.priceLabel.frame), kSecPriceWidth*KDeviceWidth, kRankLabelHeight*KDeviceHeight)];
-        self.secPriceLabel.textColor = [UIColor colorWithRed:3/255.0 green:133/255.0 blue:125/255.0 alpha:1.0];
-        
-        self.GPSLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMinX(self.conTimesLabel.frame), CGRectGetMinY(self.priceLabel.frame), kRankLabelWidth*KDeviceWidth, kRankLabelHeight*KDeviceHeight)];
-        self.GPSLabel.textColor = [UIColor grayColor];
-        self.GPSLabel.text = @"距离:";
-        
-        self.secGPSLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.GPSLabel.frame), CGRectGetMinY(self.priceLabel.frame), 3*kRankLabelWidth*KDeviceWidth, kRankLabelHeight*KDeviceHeight)];
-        self.secGPSLabel.textColor = [UIColor colorWithRed:3/255.0 green:133/255.0 blue:125/255.0 alpha:1.0];
-        self.secGPSLabel.textAlignment = NSTextAlignmentLeft;
-        
-        self.locationLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMinX(self.nameLabel.frame), CGRectGetMaxY(self.priceLabel.frame), kRankLabelWidth*KDeviceWidth, kRankLabelHeight*KDeviceHeight)];
+        self.locationLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMinX(self.rankLabel.frame), CGRectGetMaxY(self.rankLabel.frame), kRankLabelWidth*KDeviceWidth, kRankLabelHeight*KDeviceHeight)];
         self.locationLabel.textColor = [UIColor grayColor];
         self.locationLabel.text = @"位置:";
         
         self.secLocationLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.locationLabel.frame), CGRectGetMinY(self.locationLabel.frame)-1, kSecLocationWidth*KDeviceWidth, kRankLabelHeight*KDeviceHeight)];
         self.secLocationLabel.textColor = [UIColor colorWithRed:3/255.0 green:133/255.0 blue:125/255.0 alpha:1.0];
         
-        starRate = [[StarRateView alloc]initWithFrame:CGRectMake(CGRectGetMinX(self.imageView.frame), CGRectGetMaxY(self.imageView.frame)+kImageDownInterval*KDeviceHeight, kImageWidth*KDeviceHeight, kStarRateHeight*KDeviceHeight) numberOfStars:5];
-        starRate.allowIncompleteStar = YES;
-        starRate.hasAnimation = NO;
-        [self addSubview:starRate];
-        
+//        starRate = [[StarRateView alloc]initWithFrame:CGRectMake(CGRectGetMinX(self.imageView.frame), CGRectGetMaxY(self.imageView.frame)+kImageDownInterval*KDeviceHeight, kImageWidth*KDeviceHeight, kStarRateHeight*KDeviceHeight) numberOfStars:5];
+//        starRate.allowIncompleteStar = YES;
+//        starRate.hasAnimation = NO;
+//        [self addSubview:starRate];
         
         [self chooseTextFont];
         [self addAllSubView];
@@ -151,16 +150,17 @@
     [self addSubview:self.secRankLabel];
     [self addSubview:self.specialLabel];
     [self addSubview:self.specialView];
-    [self addSubview:self.priceLabel];
-    [self addSubview:self.secPriceLabel];
+//    [self addSubview:self.priceLabel];
+//    [self addSubview:self.secPriceLabel];
     [self addSubview:self.locationLabel];
     [self addSubview:self.secLocationLabel];
-    [self addSubview:self.conTimesLabel];
-    [self addSubview:self.secConTimesLabel];
+//    [self addSubview:self.conTimesLabel];
+//    [self addSubview:self.secConTimesLabel];
     [self addSubview:self.departmentLabel];
     [self addSubview:self.docTitleLabel];
-    [self addSubview:self.GPSLabel];
-    [self addSubview:self.secGPSLabel];
+//    [self addSubview:self.GPSLabel];
+//    [self addSubview:self.secGPSLabel];
+
 }
 
 - (void)handleSingleTap:(UITapGestureRecognizer *)sender{
@@ -178,14 +178,15 @@
         self.specialView.font = [UIFont systemFontOfSize:18];
         self.rankLabel.font = [UIFont systemFontOfSize:13];
         self.secRankLabel.font = [UIFont systemFontOfSize:15];
-        self.conTimesLabel.font = [UIFont systemFontOfSize:13];
-        self.secConTimesLabel.font = [UIFont systemFontOfSize:15];
-        self.priceLabel.font = [UIFont systemFontOfSize:13];
-        self.secPriceLabel.font = [UIFont systemFontOfSize:15];
+//        self.conTimesLabel.font = [UIFont systemFontOfSize:13];
+//        self.secConTimesLabel.font = [UIFont systemFontOfSize:15];
+//        self.priceLabel.font = [UIFont systemFontOfSize:13];
+//        self.secPriceLabel.font = [UIFont systemFontOfSize:15];
         self.locationLabel.font = [UIFont systemFontOfSize:13];
         self.secLocationLabel.font = [UIFont systemFontOfSize:15];
-        self.GPSLabel.font = [UIFont systemFontOfSize:13];
-        self.secGPSLabel.font = [UIFont systemFontOfSize:15];
+//        self.GPSLabel.font = [UIFont systemFontOfSize:13];
+//        self.secGPSLabel.font = [UIFont systemFontOfSize:15];
+
     }
     if (KDeviceWidth>=374&&KDeviceWidth<=376) {
         self.nameLabel.font = [UIFont systemFontOfSize:18];
@@ -195,14 +196,14 @@
         self.specialView.font = [UIFont systemFontOfSize:15];
         self.rankLabel.font = [UIFont systemFontOfSize:12];
         self.secRankLabel.font = [UIFont systemFontOfSize:14];
-        self.conTimesLabel.font = [UIFont systemFontOfSize:12];
-        self.secConTimesLabel.font = [UIFont systemFontOfSize:14];
-        self.priceLabel.font = [UIFont systemFontOfSize:12];
-        self.secPriceLabel.font = [UIFont systemFontOfSize:14];
+//        self.conTimesLabel.font = [UIFont systemFontOfSize:12];
+//        self.secConTimesLabel.font = [UIFont systemFontOfSize:14];
+//        self.priceLabel.font = [UIFont systemFontOfSize:12];
+//        self.secPriceLabel.font = [UIFont systemFontOfSize:14];
         self.locationLabel.font = [UIFont systemFontOfSize:12];
         self.secLocationLabel.font = [UIFont systemFontOfSize:14];
-        self.GPSLabel.font = [UIFont systemFontOfSize:12];
-        self.secGPSLabel.font = [UIFont systemFontOfSize:14];
+//        self.GPSLabel.font = [UIFont systemFontOfSize:12];
+//        self.secGPSLabel.font = [UIFont systemFontOfSize:14];
     }
     if (KDeviceWidth >=319&&KDeviceWidth <=321&&KDeviceHeight<=569&&KDeviceHeight>=567) {
         self.nameLabel.font = [UIFont systemFontOfSize:16];
@@ -212,14 +213,14 @@
         self.specialView.font = [UIFont systemFontOfSize:13];
         self.rankLabel.font = [UIFont systemFontOfSize:10];
         self.secRankLabel.font = [UIFont systemFontOfSize:12];
-        self.conTimesLabel.font = [UIFont systemFontOfSize:10];
-        self.secConTimesLabel.font = [UIFont systemFontOfSize:12];
-        self.priceLabel.font = [UIFont systemFontOfSize:10];
-        self.secPriceLabel.font = [UIFont systemFontOfSize:12];
+//        self.conTimesLabel.font = [UIFont systemFontOfSize:10];
+//        self.secConTimesLabel.font = [UIFont systemFontOfSize:12];
+//        self.priceLabel.font = [UIFont systemFontOfSize:10];
+//        self.secPriceLabel.font = [UIFont systemFontOfSize:12];
         self.locationLabel.font = [UIFont systemFontOfSize:10];
         self.secLocationLabel.font = [UIFont systemFontOfSize:12];
-        self.GPSLabel.font = [UIFont systemFontOfSize:10];
-        self.secGPSLabel.font = [UIFont systemFontOfSize:12];
+//        self.GPSLabel.font = [UIFont systemFontOfSize:10];
+//        self.secGPSLabel.font = [UIFont systemFontOfSize:12];
     }
     if (KDeviceWidth >=319&&KDeviceWidth <=321&&KDeviceHeight<=481&&KDeviceHeight>=479) {
         self.nameLabel.font = [UIFont systemFontOfSize:15];
@@ -229,14 +230,14 @@
         self.specialView.font = [UIFont systemFontOfSize:11];
         self.rankLabel.font = [UIFont systemFontOfSize:10];
         self.secRankLabel.font = [UIFont systemFontOfSize:12];
-        self.conTimesLabel.font = [UIFont systemFontOfSize:10];
-        self.secConTimesLabel.font = [UIFont systemFontOfSize:12];
-        self.priceLabel.font = [UIFont systemFontOfSize:10];
-        self.secPriceLabel.font = [UIFont systemFontOfSize:12];
+//        self.conTimesLabel.font = [UIFont systemFontOfSize:10];
+//        self.secConTimesLabel.font = [UIFont systemFontOfSize:12];
+//        self.priceLabel.font = [UIFont systemFontOfSize:10];
+//        self.secPriceLabel.font = [UIFont systemFontOfSize:12];
         self.locationLabel.font = [UIFont systemFontOfSize:10];
         self.secLocationLabel.font = [UIFont systemFontOfSize:12];
-        self.GPSLabel.font = [UIFont systemFontOfSize:10];
-        self.secGPSLabel.font = [UIFont systemFontOfSize:12];
+//        self.GPSLabel.font = [UIFont systemFontOfSize:10];
+//        self.secGPSLabel.font = [UIFont systemFontOfSize:12];
     }
 }
 

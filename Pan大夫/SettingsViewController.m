@@ -63,22 +63,22 @@
     [super viewDidAppear:animated];
 
     //检查plist文件
-    NSArray *paths =NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
-    NSString *documentsDirectory =[paths objectAtIndex:0];
-    NSString *documentPlistPath = [documentsDirectory stringByAppendingPathComponent:@"login.plist"];//plist文件位置
+//    NSArray *paths =NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+//    NSString *documentsDirectory =[paths objectAtIndex:0];
+//    NSString *documentPlistPath = [documentsDirectory stringByAppendingPathComponent:@"login.plist"];//plist文件位置
+//    
+//    NSMutableDictionary *plistDictionary = [[NSMutableDictionary alloc]initWithContentsOfFile:documentPlistPath];
+//    NSString *isLoggedIn = [plistDictionary objectForKey:@"login"];
+//    NSLog(@"asd %@",isLoggedIn);
+//    
+//    //未登录
+//    if ([isLoggedIn isEqualToString:@"no"])
+//    {
+//        if (loginView == nil) {
+//            loginView = [[LoginViewController alloc]initWithNav:NO];
+//            loginView.settingsView = self;
+//            [self.view addSubview:loginView.view];
     
-    NSMutableDictionary *plistDictionary = [[NSMutableDictionary alloc]initWithContentsOfFile:documentPlistPath];
-    NSString *isLoggedIn = [plistDictionary objectForKey:@"login"];
-    NSLog(@"asd %@",isLoggedIn);
-    
-    //未登录
-    if ([isLoggedIn isEqualToString:@"no"])
-    {
-        if (loginView == nil) {
-            loginView = [[LoginViewController alloc]initWithNav:NO];
-            loginView.settingsView = self;
-            [self.view addSubview:loginView.view];
-            
             
             //            loginView.title = @"登录";
             //            UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:loginView];
@@ -86,14 +86,14 @@
             //            nav.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:0/255.0 green:175/255.0 blue:170/255.0 alpha:1.0],NSFontAttributeName : [UIFont boldSystemFontOfSize:28]};
             //            [self.navigationController presentViewController:nav animated:YES completion:^(void){}];
             
-        }
-    }
-    
-    //已登录
-    else
-    {
-        [self userDidLogin:isLoggedIn];
-    }
+//        }
+//    }
+//    
+//    //已登录
+//    else
+//    {
+        [self userDidLogin:@"yes"];
+ //   }
 
 }
 
@@ -106,7 +106,7 @@
  *  用户成功登录时执行，改变UI
  */
 - (void)userDidLogin:(NSString*)IDNum{
-    userLabel.text = IDNum;
+    userLabel.text = @"";
     userLabel.frame = CGRectMake((userImageW - labelWL)/2, 64 + userImageH - 1.8*labelH, labelWL, labelH);
     userLabel.font = [UIFont systemFontOfSize:telFont];
 }

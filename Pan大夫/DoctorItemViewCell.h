@@ -15,12 +15,12 @@
 @property (strong, nonatomic) UILabel *nameLabel;
 @property (strong, nonatomic) UILabel *secRankLabel;
 @property (strong, nonatomic) UITextView *specialView;
-@property (strong, nonatomic) UILabel *secPriceLabel;
+//@property (strong, nonatomic) UILabel *secPriceLabel;
 @property (strong, nonatomic) UILabel *secLocationLabel;
-@property (strong, nonatomic) UILabel *secConTimesLabel;
-@property (strong, nonatomic) UILabel *secGPSLabel;
+//@property (strong, nonatomic) UILabel *secConTimesLabel;
+//@property (strong, nonatomic) UILabel *secGPSLabel;
 @property (strong, nonatomic) UILabel *departmentLabel;
 @property (strong, nonatomic) UILabel *docTitleLabel;
 @property (strong, nonatomic) Doctor *doctor;
-@property (strong, nonatomic) StarRateView *starRate;
+//@property (strong, nonatomic) StarRateView *starRate;
 @end

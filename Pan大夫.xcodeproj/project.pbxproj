@@ -11,7 +11,8 @@
 		2A624AFD1AABD59E00189660 /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A624AFC1AABD59E00189660 /* Doctor.m */; };
 		2A624B031AAC304C00189660 /* MyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A624B021AAC304C00189660 /* MyScrollView.m */; };
 		2A624B061AAC307A00189660 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A624B051AAC307A00189660 /* TestViewController.m */; };
-		2A7FACF81AC3E0E800C32C87 /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7FACF71AC3E0E800C32C87 /* libbaidumapapi.a */; };
+		2A6476711AECDCF8007320E0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6476701AECDCF8007320E0 /* LoginViewController.m */; };
+		2A6476731AECE28A007320E0 /* libbaidumapapi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6476721AECE28A007320E0 /* libbaidumapapi.a */; };
 		2A7FACFA1AC3E1C300C32C87 /* login.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A7FACF91AC3E1C300C32C87 /* login.plist */; };
 		2A8D62D51ABED284003ADBC6 /* SearcherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8D62CB1ABED284003ADBC6 /* SearcherViewController.m */; };
 		2A8D62D61ABED284003ADBC6 /* MyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8D62CD1ABED284003ADBC6 /* MyTableView.m */; };
@@ -91,7 +92,6 @@
 		4D4D0D2C1ABB259100696379 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4D0D2B1ABB259100696379 /* CoreGraphics.framework */; };
 		4D4D0D2E1ABB259900696379 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4D0D2D1ABB259900696379 /* Foundation.framework */; };
 		4D4D0D301ABB25A500696379 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4D0D2F1ABB25A500696379 /* UIKit.framework */; };
-		4D56E3C81AD2DE2400FCBB36 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D56E3C71AD2DE2400FCBB36 /* LoginViewController.m */; };
 		4D7D6C641AB7175600714AFC /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D6C631AB7175600714AFC /* Order.m */; };
 		4D8243FE1A91C8AA0050A6A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8243FD1A91C8AA0050A6A7 /* main.m */; };
 		4D8244071A91C8AA0050A6A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D8244051A91C8AA0050A6A7 /* Main.storyboard */; };
@@ -174,7 +174,8 @@
 		2A624B021AAC304C00189660 /* MyScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScrollView.m; sourceTree = "<group>"; };
 		2A624B041AAC307A00189660 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		2A624B051AAC307A00189660 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
-		2A7FACF71AC3E0E800C32C87 /* libbaidumapapi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbaidumapapi.a; sourceTree = "<group>"; };
+		2A6476701AECDCF8007320E0 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2A6476721AECE28A007320E0 /* libbaidumapapi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbaidumapapi.a; sourceTree = "<group>"; };
 		2A7FACF91AC3E1C300C32C87 /* login.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = login.plist; sourceTree = "<group>"; };
 		2A8D62CB1ABED284003ADBC6 /* SearcherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearcherViewController.m; sourceTree = "<group>"; };
 		2A8D62CC1ABED284003ADBC6 /* InformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationViewController.h; sourceTree = "<group>"; };
@@ -349,7 +350,6 @@
 		4D4D0D2B1ABB259100696379 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4D4D0D2D1ABB259900696379 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4D4D0D2F1ABB25A500696379 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		4D56E3C71AD2DE2400FCBB36 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../../LoginViewController.m; sourceTree = "<group>"; };
 		4D7D6C621AB7175600714AFC /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
 		4D7D6C631AB7175600714AFC /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
 		4D8243F81A91C8AA0050A6A7 /* Pan大夫.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pan大夫.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -497,6 +497,7 @@
 				4D40CA751A932D28005EB7DE /* QQConnection.framework in Frameworks */,
 				4DA5C8131A9613FB00BFF070 /* libMobClickLibrary.a in Frameworks */,
 				4D40CA7A1A932D28005EB7DE /* TencentWeiboConnection.framework in Frameworks */,
+				2A6476731AECE28A007320E0 /* libbaidumapapi.a in Frameworks */,
 				4D40CA801A932D28005EB7DE /* ShareSDKCoreService.framework in Frameworks */,
 				4D33F2AC1A91D93300592A91 /* Accounts.framework in Frameworks */,
 				4D33F2AA1A91D92D00592A91 /* Social.framework in Frameworks */,
@@ -507,7 +508,6 @@
 				4D14A1EC1A91D5280098D198 /* libicucore.dylib in Frameworks */,
 				4D40CA841A932D28005EB7DE /* RennSDK.framework in Frameworks */,
 				4D40CA8C1A932D28005EB7DE /* ShareSDKShareActionSheet.framework in Frameworks */,
-				2A7FACF81AC3E0E800C32C87 /* libbaidumapapi.a in Frameworks */,
 				4D40CA8E1A932D9C005EB7DE /* SMS_SDK.framework in Frameworks */,
 				4D40CA891A932D28005EB7DE /* ShareSDK.framework in Frameworks */,
 				4D40CA761A932D28005EB7DE /* QZoneConnection.framework in Frameworks */,
@@ -619,7 +619,7 @@
 		4D1D36081ABB269100C2B2DD /* Location */ = {
 			isa = PBXGroup;
 			children = (
-				2A7FACF71AC3E0E800C32C87 /* libbaidumapapi.a */,
+				2A6476721AECE28A007320E0 /* libbaidumapapi.a */,
 				4D1D36091ABB26BD00C2B2DD /* inc */,
 				4D1D36471ABB26BD00C2B2DD /* mapapi.bundle */,
 				4D1D364A1ABB26BD00C2B2DD /* HZAreaPickerView.h */,
@@ -886,7 +886,7 @@
 			children = (
 				4D20F8F21AD2C37000B8E529 /* MyOrders */,
 				4DCD17151AC99DA200FBFB59 /* LoginViewController.h */,
-				4D56E3C71AD2DE2400FCBB36 /* LoginViewController.m */,
+				2A6476701AECDCF8007320E0 /* LoginViewController.m */,
 				2AB82AE71ABD19270029E638 /* SettingsViewController.h */,
 				2AB82AE61ABD19270029E638 /* SettingsViewController.m */,
 				2AB82AE91ABD19270029E638 /* JKCountDownButton.m */,
@@ -1282,7 +1282,7 @@
 				4D8246241A91C9950050A6A7 /* NSDate+RFC1123.m in Sources */,
 				4DEFE6AC1AC572CC00F07D1E /* CommentCommitViewController.m in Sources */,
 				4DCC23981ABA6B2200AD0601 /* Comment.m in Sources */,
-				4D56E3C81AD2DE2400FCBB36 /* LoginViewController.m in Sources */,
+				2A6476711AECDCF8007320E0 /* LoginViewController.m in Sources */,
 				2A8D62D71ABED284003ADBC6 /* InformationViewController.mm in Sources */,
 				4DCD17311AC99EE900FBFB59 /* MyOrderViewController.m in Sources */,
 				4D82476D1A91CA5E0050A6A7 /* questionManagedObject.m in Sources */,
