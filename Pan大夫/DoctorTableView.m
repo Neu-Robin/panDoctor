@@ -11,7 +11,7 @@
 #import "UIImageView+WebCache.h"
 #import "AppDelegate.h"
 
-#define kCellHeight 160/667.0
+#define kCellHeight 140/667.0
 #define kImageHeight 164.0/736.0
 #define kHeaderHeight 30.0/736.0
 #define kUserLocationViewHeight 30/568.0
@@ -256,44 +256,46 @@
     }else{
         cell.secRankLabel.text = doctor.docCertificate;
     }
-    if (doctor.docPrice == nil) {
-        cell.secPriceLabel.text = @"";
-    }else{
-       cell.secPriceLabel.text =[NSString stringWithFormat:@"￥%@/h",doctor.docPrice];
-    }
-    if (doctor.docConTimes == nil) {
-        cell.secConTimesLabel.text = @"";
-    }else{
-        cell.secConTimesLabel.text =[NSString stringWithFormat:@"%@次", doctor.docConTimes];
-    }
+//    if (doctor.docPrice == nil) {
+//        cell.secPriceLabel.text = @"";
+//    }else{
+//       cell.secPriceLabel.text =[NSString stringWithFormat:@"￥%@/h",doctor.docPrice];
+//    }
+//    if (doctor.docConTimes == nil) {
+//        cell.secConTimesLabel.text = @"";
+//    }else{
+//        cell.secConTimesLabel.text =[NSString stringWithFormat:@"%@次", doctor.docConTimes];
+//    }
+
     if (doctor.docLocation == nil) {
        cell.secLocationLabel.text = doctor.docLocation;
     }else{
         cell.secLocationLabel.text = doctor.docLocation;
     }
-    if (doctor.docMark == nil) {
-        cell.starRate.scorePercent = 0/5.0;
-    }else{
-    cell.starRate.scorePercent = [doctor.docMark floatValue]/5.0;
-    }
-    
-    userLocation = [self getCurrentPosition];
-    if (userLocation) {
-        NSArray *gpsArray = [doctor.docGPS componentsSeparatedByString:@","];
-        double doctorLng = [[gpsArray objectAtIndex:1]doubleValue];
-        double doctorLat = [[gpsArray objectAtIndex:0]doubleValue];
-        double userLng = [[userLocation objectForKey:@"lng"]doubleValue];
-        double userLat = [[userLocation objectForKey:@"lat"]doubleValue];
-        
-        BMKMapPoint doctorPosition = BMKMapPointForCoordinate(CLLocationCoordinate2DMake(doctorLat,doctorLng));
-        BMKMapPoint userPosition = BMKMapPointForCoordinate(CLLocationCoordinate2DMake(userLat,userLng));
-        
-        CLLocationDistance distance = BMKMetersBetweenMapPoints(doctorPosition,userPosition);
-        cell.secGPSLabel.text = [NSString stringWithFormat:@"%.1fkm",distance/1000];
-    }
-    else{
-        cell.secGPSLabel.text = [NSString stringWithFormat:@""];
-    }
+//    if (doctor.docMark == nil) {
+//        cell.starRate.scorePercent = 0/5.0;
+//    }else{
+//        cell.starRate.scorePercent = [doctor.docMark floatValue]/5.0;
+//    }
+//    
+//    userLocation = [self getCurrentPosition];
+//    if (userLocation) {
+//        NSArray *gpsArray = [doctor.docGPS componentsSeparatedByString:@","];
+//        double doctorLng = [[gpsArray objectAtIndex:1]doubleValue];
+//        double doctorLat = [[gpsArray objectAtIndex:0]doubleValue];
+//        double userLng = [[userLocation objectForKey:@"lng"]doubleValue];
+//        double userLat = [[userLocation objectForKey:@"lat"]doubleValue];
+//        
+//        BMKMapPoint doctorPosition = BMKMapPointForCoordinate(CLLocationCoordinate2DMake(doctorLat,doctorLng));
+//        BMKMapPoint userPosition = BMKMapPointForCoordinate(CLLocationCoordinate2DMake(userLat,userLng));
+//        
+//        CLLocationDistance distance = BMKMetersBetweenMapPoints(doctorPosition,userPosition);
+//        cell.secGPSLabel.text = [NSString stringWithFormat:@"%.1fkm",distance/1000];
+//    }
+//    else{
+//        cell.secGPSLabel.text = [NSString stringWithFormat:@""];
+//    }
+
     
 }
 
@@ -388,15 +390,14 @@
     [appDelegate.netEngine enqueueOperation:netOp];
 }
 
-//获取当前positon
-- (NSMutableDictionary *)getCurrentPosition{
-    //获取plist字典
-    NSArray *paths =NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
-    NSString *documentsDirectory =[paths objectAtIndex:0];
-    NSString *documentPlistPath = [documentsDirectory stringByAppendingPathComponent:@"login.plist"];//plist文件位置
-    NSMutableDictionary *plistDictionary = [[NSMutableDictionary alloc]initWithContentsOfFile:documentPlistPath];
-    NSMutableDictionary *currentPosition = [plistDictionary objectForKey:@"currentPosition"];
-    return currentPosition;
-}
-
+////获取当前positon
+//- (NSMutableDictionary *)getCurrentPosition{
+//    //获取plist字典
+//    NSArray *paths =NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+//    NSString *documentsDirectory =[paths objectAtIndex:0];
+//    NSString *documentPlistPath = [documentsDirectory stringByAppendingPathComponent:@"login.plist"];//plist文件位置
+//    NSMutableDictionary *plistDictionary = [[NSMutableDictionary alloc]initWithContentsOfFile:documentPlistPath];
+//    NSMutableDictionary *currentPosition = [plistDictionary objectForKey:@"currentPosition"];
+//    return currentPosition;
+//}
 @end

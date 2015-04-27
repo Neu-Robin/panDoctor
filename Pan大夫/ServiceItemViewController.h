@@ -12,7 +12,6 @@
 @interface ServiceItemViewController : UIViewController
 
 @property(nonatomic, strong) HomeViewController *pushDelegate;
-@property (nonatomic, strong) DoctorsListViewController *specialList;
 -(id)initWithPushDelegate:(HomeViewController *)Delegate;
 @end
 
