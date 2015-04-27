@@ -103,6 +103,8 @@
                 cell.imageView.image = [UIImage imageNamed:@"order.png"];
             }
             cell.textLabel.textColor = [UIColor colorWithRed:204.0/255.0 green:128.0/255.0 blue:39.0/255.0 alpha:1];
+            cell.backgroundColor = [UIColor lightGrayColor];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             break;
             
         case 2:
@@ -144,10 +146,10 @@
             break;
         }
         case 1:{
-            OrdersListViewController *orderListViewController = [[OrdersListViewController alloc]init];
-            orderListViewController.title = @"我的订单";
-            orderListViewController.hidesBottomBarWhenPushed = YES;
-            [[self viewController].navigationController pushViewController:orderListViewController animated:YES];
+//            OrdersListViewController *orderListViewController = [[OrdersListViewController alloc]init];
+//            orderListViewController.title = @"我的订单";
+//            orderListViewController.hidesBottomBarWhenPushed = YES;
+//            [[self viewController].navigationController pushViewController:orderListViewController animated:YES];
             break;
         }
         case 2:

@@ -11,5 +11,5 @@
 #define Pan___PreDefination_h
 
 #define HOSTNAME @"192.168.1.108:8888/mental"
-#define test 1324123423403
+
 #endif
