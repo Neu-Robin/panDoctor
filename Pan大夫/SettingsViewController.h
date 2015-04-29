@@ -37,7 +37,10 @@
 #define   telFont  (((FrameH > 567) && (FrameH < 569))?17:(((FrameH > 666) && (FrameH < 668))? 20 : (((FrameH > 735) && (FrameH < 737))? 22 : 17)))
 #define   loginFont  (((FrameH > 567) && (FrameH < 569))?16:(((FrameH > 666) && (FrameH < 668))? 19 : (((FrameH > 735) && (FrameH < 737))? 21 : 16)))
 #define   hitFont  (((FrameH > 567) && (FrameH < 569))?13:(((FrameH > 666) && (FrameH < 668))? 15 : (((FrameH > 735) && (FrameH < 737))? 17 : 13)))
-
+#define k_scale_up 220.0/736.0
+#define   scrollY  (((FrameH > 567) && (FrameH < 569))?-12:(((FrameH > 666) && (FrameH < 668))? 35 : (((FrameH > 735) && (FrameH < 737))? 60 : -12)))
+#define   scrollW  ((FrameH > 735) && (FrameH < 737))? 623/455 * userImageW : userImageW
+#define   scrollH  (((FrameH > 567) && (FrameH < 569))?340:(((FrameH > 666) && (FrameH < 668))? 310 : (((FrameH > 735) && (FrameH < 737))? 300 : 340)))
 
 @interface SettingsViewController : UIViewController
 
